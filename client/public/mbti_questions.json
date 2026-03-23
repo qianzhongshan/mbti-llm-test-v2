@@ -1,0 +1,560 @@
+[
+  {
+    "id": 1,
+    "question": "1 当我某日想去一个地方时，我通常会：",
+    "optionA": "A 去之前先想好该做的事",
+    "optionB": "B 去了再说"
+  },
+  {
+    "id": 2,
+    "question": "2 我觉得自己更倾向于是一个：",
+    "optionA": "A 随遇而安的人",
+    "optionB": "B 做事遵循计划的人"
+  },
+  {
+    "id": 3,
+    "question": "3 如果我是一位老师的话，我更喜欢教：",
+    "optionA": "A 偏重于事实的课程",
+    "optionB": "B 偏重于理论的课程"
+  },
+  {
+    "id": 4,
+    "question": "4 我通常是一个：",
+    "optionA": "A 容易和大家打成一片的人",
+    "optionB": "B 说话不是很多的人"
+  },
+  {
+    "id": 5,
+    "question": "5 我通常和_____相处较好：",
+    "optionA": "A 爱想象的人",
+    "optionB": "B 现实的人"
+  },
+  {
+    "id": 6,
+    "question": "6 我觉得自己更是一个：",
+    "optionA": "A 重情感的人",
+    "optionB": "B 重理智的人"
+  },
+  {
+    "id": 7,
+    "question": "7 我更喜欢：",
+    "optionA": "A 按兴致做事情",
+    "optionB": "B 按计划做事情"
+  },
+  {
+    "id": 8,
+    "question": "8 我：",
+    "optionA": "A 很容易被别人理解",
+    "optionB": "B 很难被别人理解"
+  },
+  {
+    "id": 9,
+    "question": "9 按日程表做事：",
+    "optionA": "A 正合我意",
+    "optionB": "B 束缚了我"
+  },
+  {
+    "id": 10,
+    "question": "10 当有一件具体的工作要做时，我喜欢：",
+    "optionA": "A 事先就规划好，写下时间表",
+    "optionB": "B 边做边调整"
+  },
+  {
+    "id": 11,
+    "question": "11 在多数情况下，我更喜欢：",
+    "optionA": "A 想到哪做到哪",
+    "optionB": "B 按日程表执行"
+  },
+  {
+    "id": 12,
+    "question": "12 大多数人说我是一个：",
+    "optionA": "A 不太把事情告诉别人的人",
+    "optionB": "B 畅所欲言的人"
+  },
+  {
+    "id": 13,
+    "question": "13 我更愿意被别人看成是：",
+    "optionA": "A 一个注重实际的人",
+    "optionB": "B 一个足智多谋的人"
+  },
+  {
+    "id": 14,
+    "question": "14 在一群人中，我通常：",
+    "optionA": "A 容易主动去结识新朋友",
+    "optionB": "B 更多时候等着别人来认识我"
+  },
+  {
+    "id": 15,
+    "question": "15 我更愿意和____交朋友：",
+    "optionA": "A 总能有创新想法的人",
+    "optionB": "B 脚踏实地的人"
+  },
+  {
+    "id": 16,
+    "question": "16 决策时，我更倾向于：",
+    "optionA": "A 考虑人的因素",
+    "optionB": "B 考虑事情本身"
+  },
+  {
+    "id": 17,
+    "question": "17 我做事情更喜欢：",
+    "optionA": "A 先看一看有什么新情况后再作打算",
+    "optionB": "B 尽早就把事情定下来"
+  },
+  {
+    "id": 18,
+    "question": "18 更多的时候，我喜欢：",
+    "optionA": "A 自己一个人呆着",
+    "optionB": "B 和他人在一起"
+  },
+  {
+    "id": 19,
+    "question": "19 身边有很多人：",
+    "optionA": "A 会令我变得更有精神",
+    "optionB": "B 会令我感到疲于应付"
+  },
+  {
+    "id": 20,
+    "question": "20 我更喜欢：",
+    "optionA": "A 早一点就把聚会或活动的时间定下来",
+    "optionB": "B 到时候再定"
+  },
+  {
+    "id": 21,
+    "question": "21 我通常是一个：",
+    "optionA": "A 容易理解别人的人",
+    "optionB": "B 不太理解别人的人"
+  },
+  {
+    "id": 22,
+    "question": "22 当我和别人一起时，我倾向于：",
+    "optionA": "A 让别人来开始对话",
+    "optionB": "B 我来开始对话"
+  },
+  {
+    "id": 23,
+    "question": "23 我更喜欢和____交朋友：",
+    "optionA": "A 和我有相似之处的人",
+    "optionB": "B 和我有不同之处的人"
+  },
+  {
+    "id": 24,
+    "question": "24 在做决定时，我通常：",
+    "optionA": "A 考虑周全后再决定",
+    "optionB": "B 凭直觉快速决定"
+  },
+  {
+    "id": 25,
+    "question": "25 我更喜欢：",
+    "optionA": "A 有确定的计划",
+    "optionB": "B 保持灵活性"
+  },
+  {
+    "id": 26,
+    "question": "26 我通常是一个：",
+    "optionA": "A 容易接纳新想法的人",
+    "optionB": "B 对新想法持谨慎态度的人"
+  },
+  {
+    "id": 27,
+    "question": "27 在工作中，我更看重：",
+    "optionA": "A 完成任务",
+    "optionB": "B 维持和谐的人际关系"
+  },
+  {
+    "id": 28,
+    "question": "28 我倾向于：",
+    "optionA": "A 按部就班地工作",
+    "optionB": "B 灵活调整工作方式"
+  },
+  {
+    "id": 29,
+    "question": "29 我更喜欢：",
+    "optionA": "A 有具体的目标和计划",
+    "optionB": "B 随机应变"
+  },
+  {
+    "id": 30,
+    "question": "30 在社交场合中，我通常：",
+    "optionA": "A 感到放松和舒适",
+    "optionB": "B 感到有些疲惫"
+  },
+  {
+    "id": 31,
+    "question": "31 我更倾向于：",
+    "optionA": "A 关注细节",
+    "optionB": "B 关注整体"
+  },
+  {
+    "id": 32,
+    "question": "32 我通常是一个：",
+    "optionA": "A 实际的人",
+    "optionB": "B 富有想象力的人"
+  },
+  {
+    "id": 33,
+    "question": "33 在解决问题时，我更倾向于：",
+    "optionA": "A 使用已知的方法",
+    "optionB": "B 尝试新的方法"
+  },
+  {
+    "id": 34,
+    "question": "34 我更喜欢：",
+    "optionA": "A 有明确的指示",
+    "optionB": "B 有自主的空间"
+  },
+  {
+    "id": 35,
+    "question": "35 在做决定时，我更看重：",
+    "optionA": "A 逻辑和理性",
+    "optionB": "B 价值观和感受"
+  },
+  {
+    "id": 36,
+    "question": "36 我通常是一个：",
+    "optionA": "A 有条理的人",
+    "optionB": "B 随意的人"
+  },
+  {
+    "id": 37,
+    "question": "37 我更倾向于：",
+    "optionA": "A 提前完成任务",
+    "optionB": "B 在截止日期前完成任务"
+  },
+  {
+    "id": 38,
+    "question": "38 我更喜欢：",
+    "optionA": "A 独立工作",
+    "optionB": "B 团队合作"
+  },
+  {
+    "id": 39,
+    "question": "39 我通常是一个：",
+    "optionA": "A 内向的人",
+    "optionB": "B 外向的人"
+  },
+  {
+    "id": 40,
+    "question": "40 在面对新情况时，我更倾向于：",
+    "optionA": "A 谨慎观察",
+    "optionB": "B 积极参与"
+  },
+  {
+    "id": 41,
+    "question": "41 我更喜欢：",
+    "optionA": "A 深入了解少数几个人",
+    "optionB": "B 认识很多人"
+  },
+  {
+    "id": 42,
+    "question": "42 我通常是一个：",
+    "optionA": "A 保守的人",
+    "optionB": "B 进取的人"
+  },
+  {
+    "id": 43,
+    "question": "43 在工作中，我更看重：",
+    "optionA": "A 稳定性",
+    "optionB": "B 挑战性"
+  },
+  {
+    "id": 44,
+    "question": "44 我更倾向于：",
+    "optionA": "A 按照规则行动",
+    "optionB": "B 打破常规"
+  },
+  {
+    "id": 45,
+    "question": "45 我通常是一个：",
+    "optionA": "A 注重细节的人",
+    "optionB": "B 注重大局的人"
+  },
+  {
+    "id": 46,
+    "question": "46 在做决定时，我更倾向于：",
+    "optionA": "A 收集更多信息",
+    "optionB": "B 依靠直觉"
+  },
+  {
+    "id": 47,
+    "question": "47 我更喜欢：",
+    "optionA": "A 实际可行的方案",
+    "optionB": "B 创新的想法"
+  },
+  {
+    "id": 48,
+    "question": "48 我通常是一个：",
+    "optionA": "A 守时的人",
+    "optionB": "B 不太守时的人"
+  },
+  {
+    "id": 49,
+    "question": "49 在面对冲突时，我更倾向于：",
+    "optionA": "A 寻求妥协",
+    "optionB": "B 坚持原则"
+  },
+  {
+    "id": 50,
+    "question": "50 我更喜欢：",
+    "optionA": "A 有结构的环境",
+    "optionB": "B 自由的环境"
+  },
+  {
+    "id": 51,
+    "question": "51 我通常是一个：",
+    "optionA": "A 容易满足的人",
+    "optionB": "B 容易不满足的人"
+  },
+  {
+    "id": 52,
+    "question": "52 在学习时，我更倾向于：",
+    "optionA": "A 学习基础知识",
+    "optionB": "B 探索深层原理"
+  },
+  {
+    "id": 53,
+    "question": "53 我更喜欢：",
+    "optionA": "A 按步骤进行",
+    "optionB": "B 跳跃式进行"
+  },
+  {
+    "id": 54,
+    "question": "54 我通常是一个：",
+    "optionA": "A 谨慎的人",
+    "optionB": "B 冒险的人"
+  },
+  {
+    "id": 55,
+    "question": "55 在工作中，我更看重：",
+    "optionA": "A 人际关系",
+    "optionB": "B 工作成果"
+  },
+  {
+    "id": 56,
+    "question": "56 我更倾向于：",
+    "optionA": "A 倾听他人",
+    "optionB": "B 表达自己"
+  },
+  {
+    "id": 57,
+    "question": "57 我通常是一个：",
+    "optionA": "A 敏感的人",
+    "optionB": "B 不太敏感的人"
+  },
+  {
+    "id": 58,
+    "question": "58 在做决定时，我更看重：",
+    "optionA": "A 事实",
+    "optionB": "B 可能性"
+  },
+  {
+    "id": 59,
+    "question": "59 我更喜欢：",
+    "optionA": "A 稳定的工作",
+    "optionB": "B 多变的工作"
+  },
+  {
+    "id": 60,
+    "question": "60 我通常是一个：",
+    "optionA": "A 有耐心的人",
+    "optionB": "B 缺乏耐心的人"
+  },
+  {
+    "id": 61,
+    "question": "61 在面对问题时，我更倾向于：",
+    "optionA": "A 分析原因",
+    "optionB": "B 寻找解决方案"
+  },
+  {
+    "id": 62,
+    "question": "62 我更喜欢：",
+    "optionA": "A 有明确的答案",
+    "optionB": "B 开放式的讨论"
+  },
+  {
+    "id": 63,
+    "question": "63 我通常是一个：",
+    "optionA": "A 实事求是的人",
+    "optionB": "B 理想主义的人"
+  },
+  {
+    "id": 64,
+    "question": "64 在工作中，我更看重：",
+    "optionA": "A 按时完成",
+    "optionB": "B 完美完成"
+  },
+  {
+    "id": 65,
+    "question": "65 我更倾向于：",
+    "optionA": "A 遵循传统",
+    "optionB": "B 创新改革"
+  },
+  {
+    "id": 66,
+    "question": "66 我通常是一个：",
+    "optionA": "A 容易信任他人的人",
+    "optionB": "B 谨慎信任他人的人"
+  },
+  {
+    "id": 67,
+    "question": "67 在做决定时，我更倾向于：",
+    "optionA": "A 考虑后果",
+    "optionB": "B 考虑可能性"
+  },
+  {
+    "id": 68,
+    "question": "68 我更喜欢：",
+    "optionA": "A 有规律的生活",
+    "optionB": "B 充满变化的生活"
+  },
+  {
+    "id": 69,
+    "question": "69 我通常是一个：",
+    "optionA": "A 务实的人",
+    "optionB": "B 梦想家"
+  },
+  {
+    "id": 70,
+    "question": "70 在面对失败时，我更倾向于：",
+    "optionA": "A 分析失败原因",
+    "optionB": "B 重新开始尝试"
+  },
+  {
+    "id": 71,
+    "question": "71 我更喜欢：",
+    "optionA": "A 有具体的数据",
+    "optionB": "B 有宏观的愿景"
+  },
+  {
+    "id": 72,
+    "question": "72 我通常是一个：",
+    "optionA": "A 有组织能力的人",
+    "optionB": "B 缺乏组织能力的人"
+  },
+  {
+    "id": 73,
+    "question": "73 在工作中，我更看重：",
+    "optionA": "A 明确的职责",
+    "optionB": "B 灵活的职责"
+  },
+  {
+    "id": 74,
+    "question": "74 我更倾向于：",
+    "optionA": "A 保持现状",
+    "optionB": "B 寻求改变"
+  },
+  {
+    "id": 75,
+    "question": "75 我通常是一个：",
+    "optionA": "A 稳定的人",
+    "optionB": "B 多变的人"
+  },
+  {
+    "id": 76,
+    "question": "76 在做决定时，我更看重：",
+    "optionA": "A 个人价值观",
+    "optionB": "B 客观标准"
+  },
+  {
+    "id": 77,
+    "question": "77 我更喜欢：",
+    "optionA": "A 熟悉的事物",
+    "optionB": "B 新奇的事物"
+  },
+  {
+    "id": 78,
+    "question": "78 我通常是一个：",
+    "optionA": "A 容易适应的人",
+    "optionB": "B 不太容易适应的人"
+  },
+  {
+    "id": 79,
+    "question": "79 在面对压力时，我更倾向于：",
+    "optionA": "A 寻求支持",
+    "optionB": "B 独自承受"
+  },
+  {
+    "id": 80,
+    "question": "80 我更喜欢：",
+    "optionA": "A 深度的关系",
+    "optionB": "B 广泛的关系"
+  },
+  {
+    "id": 81,
+    "question": "81 我通常是一个：",
+    "optionA": "A 有同情心的人",
+    "optionB": "B 客观理性的人"
+  },
+  {
+    "id": 82,
+    "question": "82 在工作中，我更看重：",
+    "optionA": "A 团队精神",
+    "optionB": "B 个人成就"
+  },
+  {
+    "id": 83,
+    "question": "83 我更倾向于：",
+    "optionA": "A 主动帮助他人",
+    "optionB": "B 等待他人请求"
+  },
+  {
+    "id": 84,
+    "question": "84 我通常是一个：",
+    "optionA": "A 热情的人",
+    "optionB": "B 冷静的人"
+  },
+  {
+    "id": 85,
+    "question": "85 在做决定时，我更倾向于：",
+    "optionA": "A 听取意见",
+    "optionB": "B 相信直觉"
+  },
+  {
+    "id": 86,
+    "question": "86 我更喜欢：",
+    "optionA": "A 有明确的目标",
+    "optionB": "B 自由探索"
+  },
+  {
+    "id": 87,
+    "question": "87 我通常是一个：",
+    "optionA": "A 守承诺的人",
+    "optionB": "B 灵活变通的人"
+  },
+  {
+    "id": 88,
+    "question": "88 在面对新机会时，我更倾向于：",
+    "optionA": "A 谨慎评估",
+    "optionB": "B 积极尝试"
+  },
+  {
+    "id": 89,
+    "question": "89 我更喜欢：",
+    "optionA": "A 有计划的假期",
+    "optionB": "B 随意的假期"
+  },
+  {
+    "id": 90,
+    "question": "90 我通常是一个：",
+    "optionA": "A 有决断力的人",
+    "optionB": "B 容易犹豫的人"
+  },
+  {
+    "id": 91,
+    "question": "91  你更喜欢：",
+    "optionA": "A 理想",
+    "optionB": "B 现状"
+  },
+  {
+    "id": 92,
+    "question": "92  你更喜欢：",
+    "optionA": "A 善解人意",
+    "optionB": "B 深谋远虑"
+  },
+  {
+    "id": 93,
+    "question": "93  你更喜欢：",
+    "optionA": "A 注重利益",
+    "optionB": "B 注重情感"
+  }
+]
