@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
-import { ChevronRight, Settings, Send, Loader2 } from 'lucide-react';
+import { ChevronRight, Settings, Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface Question {
   id: number;
@@ -23,10 +24,13 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [showSettings, setShowSettings] = useState(false);
-  const [apiUrl, setApiUrl] = useState(localStorage.getItem('apiUrl') || '');
+  const [apiUrl, setApiUrl] = useState(localStorage.getItem('apiUrl') || 'https://api.deepseek.com/chat/completions');
   const [apiKey, setApiKey] = useState(localStorage.getItem('apiKey') || '');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<string | null>(null);
+  const [testingApi, setTestingApi] = useState(false);
+  const [apiStatus, setApiStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [apiMessage, setApiMessage] = useState('');
 
   // 加载题目
   useEffect(() => {
@@ -44,11 +48,64 @@ export default function Home() {
       });
   }, []);
 
+  // 测试 API 连接
+  const testApiConnection = async () => {
+    if (!apiUrl || !apiKey) {
+      setApiStatus('error');
+      setApiMessage('请输入 API 地址和密钥');
+      return;
+    }
+
+    setTestingApi(true);
+    setApiStatus('idle');
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model: 'deepseek-chat',
+          messages: [
+            {
+              role: 'user',
+              content: '你好'
+            }
+          ],
+          max_tokens: 10
+        })
+      });
+
+      if (response.ok) {
+        setApiStatus('success');
+        setApiMessage('✓ API 连接成功！');
+        toast.success('API 验证成功');
+      } else {
+        const errorData = await response.json();
+        setApiStatus('error');
+        setApiMessage(`✗ API 错误: ${errorData.error?.message || response.statusText}`);
+        toast.error('API 验证失败');
+      }
+    } catch (error) {
+      setApiStatus('error');
+      setApiMessage(`✗ 连接失败: ${error instanceof Error ? error.message : '未知错误'}`);
+      toast.error('无法连接到 API');
+    } finally {
+      setTestingApi(false);
+    }
+  };
+
   // 保存 API 配置
   const saveSettings = () => {
+    if (!apiUrl || !apiKey) {
+      toast.error('请输入 API 地址和密钥');
+      return;
+    }
     localStorage.setItem('apiUrl', apiUrl);
     localStorage.setItem('apiKey', apiKey);
     setShowSettings(false);
+    toast.success('配置已保存');
   };
 
   // 更新当前答案
@@ -82,7 +139,7 @@ export default function Home() {
   // 提交并调用 LLM 分析
   const handleSubmit = async () => {
     if (!apiUrl || !apiKey) {
-      alert('请先配置 LLM API 地址和密钥');
+      toast.error('请先配置 LLM API 地址和密钥');
       setShowSettings(true);
       return;
     }
@@ -126,7 +183,7 @@ ${answersText}
           'Authorization': `Bearer ${apiKey}`
         },
         body: JSON.stringify({
-          model: 'gpt-3.5-turbo',
+          model: 'deepseek-chat',
           messages: [
             {
               role: 'user',
@@ -139,14 +196,17 @@ ${answersText}
       });
 
       if (!response.ok) {
-        throw new Error(`API 错误: ${response.statusText}`);
+        const errorData = await response.json();
+        throw new Error(`API 错误: ${errorData.error?.message || response.statusText}`);
       }
 
       const data = await response.json();
       const analysisResult = data.choices[0].message.content;
       setResult(analysisResult);
+      toast.success('分析完成！');
     } catch (error) {
-      alert(`分析失败: ${error instanceof Error ? error.message : '未知错误'}`);
+      const errorMsg = error instanceof Error ? error.message : '未知错误';
+      toast.error(`分析失败: ${errorMsg}`);
     } finally {
       setLoading(false);
     }
@@ -218,11 +278,12 @@ ${answersText}
                   API 地址
                 </label>
                 <Input
-                  placeholder="例如: https://api.openai.com/v1/chat/completions"
+                  placeholder="https://api.deepseek.com/chat/completions"
                   value={apiUrl}
                   onChange={(e) => setApiUrl(e.target.value)}
                   className="border-indigo-200"
                 />
+                <p className="text-xs text-gray-500 mt-1">默认为 DeepSeek API</p>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -236,12 +297,46 @@ ${answersText}
                   className="border-indigo-200"
                 />
               </div>
-              <Button
-                onClick={saveSettings}
-                className="w-full bg-indigo-600 hover:bg-indigo-700"
-              >
-                保存配置
-              </Button>
+
+              {/* API 状态显示 */}
+              {apiStatus !== 'idle' && (
+                <div className={`p-3 rounded-lg flex items-center gap-2 ${
+                  apiStatus === 'success'
+                    ? 'bg-green-50 text-green-700 border border-green-200'
+                    : 'bg-red-50 text-red-700 border border-red-200'
+                }`}>
+                  {apiStatus === 'success' ? (
+                    <CheckCircle className="w-4 h-4 flex-shrink-0" />
+                  ) : (
+                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                  )}
+                  <span className="text-sm">{apiMessage}</span>
+                </div>
+              )}
+
+              <div className="flex gap-2">
+                <Button
+                  onClick={testApiConnection}
+                  disabled={testingApi}
+                  variant="outline"
+                  className="flex-1"
+                >
+                  {testingApi ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin mr-2" />
+                      测试中...
+                    </>
+                  ) : (
+                    '验证 API'
+                  )}
+                </Button>
+                <Button
+                  onClick={saveSettings}
+                  className="flex-1 bg-indigo-600 hover:bg-indigo-700"
+                >
+                  保存配置
+                </Button>
+              </div>
             </div>
           </Card>
         )}
