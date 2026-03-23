@@ -7,16 +7,16 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 function Router() {
-    return (
-          <WouterRouter base="/mbti-llm-test-v2">
-                <Switch>
-                        <Route path={"/"} component={Home} />
-                        <Route path={"/404"} component={NotFound} />
-                  {/* Final fallback route */}
-                        <Route component={NotFound} />
-                </Switch>Switch>
-          </WouterRouter>WouterRouter>
-        );
+      return (
+              <WouterRouter base="/mbti-llm-test-v2">
+                    <Switch>
+                            <Route path={"/"} component={Home} />
+                            <Route path={"/404"} component={NotFound} />
+                        {/* Final fallback route */}
+                            <Route component={NotFound} />
+                    </Switch>Switch>
+              </WouterRouter>WouterRouter>
+            );
 }
 
 // NOTE: About Theme
@@ -25,19 +25,19 @@ function Router() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
-    return (
-          <ErrorBoundary>
-                <ThemeProvider
-                          defaultTheme="light"
-                          // switchable
-                        >
-                        <TooltipProvider>
-                                  <Toaster />
-                                  <Router />
-                        </TooltipProvider>TooltipProvider>
-                </ThemeProvider>ThemeProvider>
-          </ErrorBoundary>ErrorBoundary>
-        );
+      return (
+              <ErrorBoundary>
+                    <ThemeProvider
+                                defaultTheme="light"
+                                // switchable
+                              >
+                            <TooltipProvider>
+                                      <Toaster />
+                                      <Router />
+                            </TooltipProvider>TooltipProvider>
+                    </ThemeProvider>ThemeProvider>
+              </ErrorBoundary>ErrorBoundary>
+            );
 }
 
 export default App;
